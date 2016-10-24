@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('PRC');
+
 require_once('../gehaxelt/fileLogger/Compatibility.php');
 require_once('../gehaxelt/fileLogger/FileLogger.php');
 require_once('../gehaxelt/fileLogger/PackageInfo.php');
@@ -11,11 +13,11 @@ use gehaxelt\fileLogger\PackageInfo as FLPackageInfo;
 
 try {
     $compat = Compatibility::check();
-} catch(CompatibilityException $e){
+} catch (CompatibilityException $e) {
     die($e->getMessage());
 }
 
-$log = new FileLogger(__DIR__.'/logs/example.log.php');
+$log = new FileLogger(__DIR__ . '/logs/example.log.php');
 
 $log->log('Example Notice', FileLogger::NOTICE);
 $log->log('Example Warning', FileLogger::WARNING);
