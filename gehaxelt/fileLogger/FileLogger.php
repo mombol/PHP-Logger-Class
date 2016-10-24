@@ -37,6 +37,7 @@ namespace gehaxelt\fileLogger {
          */
         const FILE_CHMOD = 755;
 
+        const INFO = '[INFO]';
         const NOTICE = '[NOTICE]';
         const WARNING = '[WARNING]';
         const ERROR = '[ERROR]';
